@@ -52,7 +52,7 @@ void setup() {
   LEFTservo.write(L_CAL);   // stop left servo
      // Switch Digital Pin 4 from the default INPUT to OUTPUT (makes LED brighter)
   Serial.begin(9600);            // Begin communciations with the serial monitor
-  Serial.println("FUCK THIS CLASS!");
+  Serial.println("THIS CLASS SUCKS!");
   int button = digitalRead(13);
   while (button == LOW) {
     button = digitalRead(13);
