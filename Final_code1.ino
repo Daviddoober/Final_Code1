@@ -1,6 +1,6 @@
-int L_CAL = 88;       //the midpoint value that will give a stop
-int R_CAL = 89;       //the midpoint value that will give a stop
-int SERVO_OFFSET = 5; // USE A SMALL/SLOW VALUE HERE!
+int L_CAL = 90;       //the midpoint value that will give a stop
+int R_CAL = 91;       //the midpoint value that will give a stop
+int SERVO_OFFSET = 4; // USE A SMALL/SLOW VALUE HERE!
 int reverse_time = 5000; //tune as needed for 180 turn
 int spin_time = 25; //tune as needed
 int go_time = 200; //tune as needed
@@ -22,8 +22,8 @@ Servo RIGHTservo;      // Right Servo is identified by servo library as variable
 Servo LEFTservo; 
 Servo gateservo;
 int g_servo_pin = 10;      // Left Servo is identified by servo library as variable LEFTservo
-int L_servo_pin = 11;   // HAVE LEFT SERVO SIGNAL FROM DIGITAL 9
-int R_servo_pin = 9;  // HAVE RIGHT SERVO SIGNAL FROM DIGITAL 10
+int L_servo_pin = 7;   // HAVE LEFT SERVO SIGNAL FROM DIGITAL 9
+int R_servo_pin = 8;  // HAVE RIGHT SERVO SIGNAL FROM DIGITAL 10
 
 // CORRECT THIS TO WHAT YOU HAVE WIRED
         // Declares the RIGHT LED attached to Digital Pin
@@ -39,9 +39,9 @@ int VALUE_C;       //value for center QRE reading
 int VALUE_R;       //value for right QRE reading
 
 // UPDATE THESE AS NEEDED
-int CUTOFF_L = 850; // Value for left QRE cutoff of white vs black
-int CUTOFF_C = 900; // Value for center QRE cutoff of white vs black
-int CUTOFF_R = 850; // Value for right QRE cutoff of white vs black
+int CUTOFF_L = 700; // Value for left QRE cutoff of white vs black
+int CUTOFF_C = 700; // Value for center QRE cutoff of white vs black
+int CUTOFF_R = 700; // Value for right QRE cutoff of white vs black
 
 void setup() {
   RIGHTservo.attach(R_servo_pin);
