@@ -1,13 +1,13 @@
 int L_CAL = 90;       //the midpoint value that will give a stop
-int R_CAL = 91;       //the midpoint value that will give a stop
-int SERVO_OFFSET = 4; // USE A SMALL/SLOW VALUE HERE!
+int R_CAL = 90;       //the midpoint value that will give a stop
+int SERVO_OFFSET = 5; // USE A SMALL/SLOW VALUE HERE!
 int reverse_time = 5000; //tune as needed for 180 turn
 int spin_time = 25; //tune as needed
 int go_time = 200; //tune as needed
 #include <SR04.h>
 
 int TRIG_PIN1 = 2;
-int ECHO_PIN1 = 6;
+int ECHO_PIN1 = 4;
 SR04 sr041 = SR04(ECHO_PIN1, TRIG_PIN1);
 long VALUE_DIST1;
 int TRIG_PIN2 = 8;
@@ -21,7 +21,7 @@ long VALUE_DIST2;
 Servo RIGHTservo;      // Right Servo is identified by servo library as variable RIGHTservo
 Servo LEFTservo; 
 Servo gateservo;
-int g_servo_pin = 10;      // Left Servo is identified by servo library as variable LEFTservo
+int g_servo_pin = 13;      // Left Servo is identified by servo library as variable LEFTservo
 int L_servo_pin = 7;   // HAVE LEFT SERVO SIGNAL FROM DIGITAL 9
 int R_servo_pin = 8;  // HAVE RIGHT SERVO SIGNAL FROM DIGITAL 10
 
@@ -39,9 +39,9 @@ int VALUE_C;       //value for center QRE reading
 int VALUE_R;       //value for right QRE reading
 
 // UPDATE THESE AS NEEDED
-int CUTOFF_L = 700; // Value for left QRE cutoff of white vs black
-int CUTOFF_C = 700; // Value for center QRE cutoff of white vs black
-int CUTOFF_R = 700; // Value for right QRE cutoff of white vs black
+int CUTOFF_L = 850; // Value for left QRE cutoff of white vs black
+int CUTOFF_C = 850; // Value for center QRE cutoff of white vs black
+int CUTOFF_R = 850; // Value for right QRE cutoff of white vs black
 
 void setup() {
   RIGHTservo.attach(R_servo_pin);
